@@ -1,8 +1,9 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { theme } from '../constants/theme'
-import  Router  from '../routes/Router'
+import Router from '../routes/Router'
+import MainAppBar from '../components/MainAppBar/MainAppBar'
 import '../styles/global.css'
 
 function App() {
@@ -11,7 +12,10 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-      <Router/>
+        <Route exact path={['/posts', '/posts/:id']}>
+          <MainAppBar />
+        </Route>
+        <Router />
       </BrowserRouter>
     </ThemeProvider>
   )
