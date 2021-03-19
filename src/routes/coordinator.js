@@ -22,3 +22,7 @@ export const logout = (history) => {
     localStorage.removeItem('token')
     history.push('/login')
 }
+
+export const goBack = (history) => {
+    history.goBack()
+}
