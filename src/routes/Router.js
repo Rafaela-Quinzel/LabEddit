@@ -1,9 +1,10 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import LoginPage from '../pages/public/Login/LoginPage'
 import SignupPage from '../pages/public/Signup/SignupPage'
 import DetailsPostPage from '../pages/private/DetailsPost/DetailsPostPage'
 import FeedPostsPage from '../pages/private/FeedPosts/FeedPostsPage'
+import CreateComment from '../components/CreateComment/CreateComment'
 
 
 
@@ -24,6 +25,9 @@ const Router = () => {
             </Route>
             <Route exact path="/posts/:id">
                 <DetailsPostPage />
+            </Route>
+            <Route exact path='/criar_post'>
+                <CreateComment/>
             </Route>
         </Switch>
     )

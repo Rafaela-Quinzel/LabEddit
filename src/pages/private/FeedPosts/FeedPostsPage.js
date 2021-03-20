@@ -1,37 +1,40 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { FeedContainer, FabStyled } from './styled'
 import { useProtectPage } from '../../../hooks/useProtectPage'
+import { useUnProtectedPage } from '../../../hooks/useUnProtectedPage'
 import { useRequestData } from '../../../hooks/useRequestData'
 import { BASE_URL } from '../../../constants/RequestConfig'
 import CardFeed from '../../../components/CardFeed/CardFeed'
+import LoadingInfo from '../../../components/Loading/LoadingInfo'
+import CreatePost from '../../../components/CreatePost/CreatePost'
 import { goToCreatePost } from '../../../routes/coordinator'
-import { LinearProgress } from '@material-ui/core'
+
 
 
 function FeedPostsPage() {
-    const [isLoading, setIsLoading] = useState(false)
+    const [open, setOpen] = useState(false)
 
-    //useProtectPage() //Proteção da página
+    useProtectPage()
+    useUnProtectedPage()
 
     const history = useHistory()
 
-    useEffect(() => {
-        if (getPosts.length === 0) {
-            setIsLoading(true)
-        } else {
-            setIsLoading(false)
-        }
-    })
+    const handleOpen = () => {
+        setOpen(!open)
+    }
 
+    const handleClose = (event) => {
+        event.preventDefault()
+        setOpen(false)
+    }
 
     const getPosts = useRequestData(`${BASE_URL}/posts`, {})
 
 
-    return (
+    return getPosts ? (
         <FeedContainer>
-            {isLoading && <LinearProgress />}
-            {getPosts && getPosts.posts && getPosts.posts.map((item) => {
+            { getPosts && getPosts.posts && getPosts.posts.map((item) => {
                 return (
                     <CardFeed
                         key={item.id}
@@ -44,10 +47,21 @@ function FeedPostsPage() {
                     />
                 )
             })}
-            <FabStyled color='secondary' onClick={() => goToCreatePost(history)}>
+            {open ? (
+                <CreatePost
+                close={handleClose}
+                />
+            ) : (
+            <FabStyled color='secondary' onClick={handleOpen}>
                 ➕
             </FabStyled>
+)}
 
+        </FeedContainer>
+
+    ) : (
+        <FeedContainer>
+            <LoadingInfo />
         </FeedContainer>
     )
 }

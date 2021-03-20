@@ -7,17 +7,18 @@ import MainAppBar from '../components/MainAppBar/MainAppBar'
 import '../styles/global.css'
 
 function App() {
-  window.document.title = "LabEddit"
+ 
 
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Route exact path={['/posts', '/posts/:id']}>
+        <Route exact path={["/posts", "/posts/:id", "/criar_post"]}>
           <MainAppBar />
         </Route>
-        <Router />
+        <Router/>
       </BrowserRouter>
     </ThemeProvider>
   )
 }
-export default App
+
+export default App;
