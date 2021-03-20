@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from '../../hooks/useForm'
 import { AddComment } from '../../services/Feed'
-import { FormContainer, CreateContainer } from './styled'
+import * as S from './styled'
 import { TextField, Button } from '@material-ui/core'
 
 
@@ -26,8 +26,8 @@ function CreateComment(props) {
    
 
     return (
-        <CreateContainer>
-            <FormContainer onSubmit={handleSubmit}>
+        <S.CreateContainer>
+            <S.FormContainer onSubmit={handleSubmit}>
                     <TextField
                         value={form.text}
                         onChange={handleInputChange}
@@ -37,6 +37,7 @@ function CreateComment(props) {
                         type='text'
                         required
                     />
+                    <S.AreaButton>
                     <Button 
                         variant='contained'
                         color="secondary"
@@ -44,9 +45,9 @@ function CreateComment(props) {
                     >
                     ENVIAR
                     </Button>
-            </FormContainer>
-        </CreateContainer>
-
+                    </S.AreaButton>
+            </S.FormContainer>
+        </S.CreateContainer>
     )
 }
 export default CreateComment; 

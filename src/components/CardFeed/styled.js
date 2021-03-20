@@ -3,17 +3,26 @@ import { mainLightGray, mainDarkPurple, mainAntiquewhite, mainDarkGray } from '.
 
 
 
-// styled CardFeed
+
+export const Wrapper = styled.div`
+  max-width: 490px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 5% 0 2% 0;
+`
+
 export const CardContainer = styled.div`
    cursor: pointer;
    display: grid;
    align-items: center;
+   max-width: 490px;
    box-shadow: 0px 0px 1em #666;
    -webkit-box-shadow: 5px 0px 1em #666;
    -moz-box-shadow: 0px 0px 1em #666;
-   &:hover{
+   /* &:hover{
       transform: scale(1.1);
-   }
+   } */
 `
 
 export const HeaderFeed = styled.div`
@@ -21,7 +30,7 @@ export const HeaderFeed = styled.div`
    display: flex;
    justify-content: center;
    padding-bottom: 2%;
-   width: 35vw;
+   max-width: 490px;
    height: 6vh;
 `
 
@@ -30,7 +39,7 @@ export const FeedCardContainer = styled.div`
    background-color: ${mainAntiquewhite};
    text-align: center;
    border-radius: 12px;
-   width: 35vw;
+   max-width: 440px;
    height: 50vh;
    margin: 5%;
    &:hover{
@@ -39,7 +48,8 @@ export const FeedCardContainer = styled.div`
 `
 
 export const CardContent = styled.div`
-   width: 30vw;
+   max-width: 400px;
+   min-width: 400px;
    height: 32vh;
    margin: 2% 5%;
    word-wrap: break-word;
@@ -49,16 +59,17 @@ export const CardContent = styled.div`
 
 export const NameUserPost = styled.h2`
    color: ${mainDarkPurple};
+   margin-top: 2%;
 `
 
 export const Image = styled.img`
-  width: 30px;
-  margin-top: 4%;
+  margin-top: 2%;
   margin-right: 2%;
 `
 
 export const TitlePost = styled.h3`
    color: ${mainDarkGray};
+   margin: 4% 5% 5% 1%;
 `
 
 export const FooterFeed = styled.div`
@@ -71,7 +82,7 @@ export const IconVotesPost = styled.img`
 
 export const TextPost = styled.p`
    color: ${mainDarkGray};
-   margin: 5% 2%;
+   margin: 5% 4% 5% 1%;
 `
 
 export const NumberVotes = styled.span`
@@ -83,6 +94,7 @@ export const NumberVotes = styled.span`
 export const NumberComments = styled.span`
   color: ${mainDarkPurple};
   font-weight: bolder;
+  margin-left: 50%;
 `
 
 export const IconComents = styled.img`

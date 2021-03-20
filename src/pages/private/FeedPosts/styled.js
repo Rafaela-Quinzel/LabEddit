@@ -8,6 +8,7 @@ export const FeedContainer = styled.div`
    text-align: center;
    display: grid;
    justify-items: center;
+   margin: 10% auto;
 `
 
 export const TitlePage = styled.h1`
@@ -15,7 +16,7 @@ export const TitlePage = styled.h1`
 `
 
 export const FabStyled = styled(Fab)`
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
 `

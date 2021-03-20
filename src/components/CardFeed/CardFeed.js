@@ -1,8 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-// import { useProtectPage } from '../../hooks/useProtectPage'
-import { CardContainer, FeedCardContainer, Image, TextPost, NumberVotes, NumberComments, IconComents,
-  HeaderFeed, CardContent, TitlePost, NameUserPost, FooterFeed, IconVotesPost, FeedCotainer } from './styled'
+import * as S from './styled'
 import { goToDetailsPost } from '../../routes/coordinator'
 import ImageLogo from '../../assets/astronauta.svg'
 import IconVotes from '../../assets/votes.svg'
@@ -12,40 +10,38 @@ import CreateComment from '../CreateComment/CreateComment'
 
 function CardFeed(props) {
 
-  // useProtectPage() //Proteção da página dando erro
-
   const history = useHistory()
 
 
   return (
-    <>
-      <CardContainer onClick={() => goToDetailsPost(history, props.id)}>
-        <FeedCardContainer>
-          <HeaderFeed>
-            <Image src={ImageLogo} alt={ImageLogo}/>
-            <NameUserPost>{props.username}</NameUserPost>
-          </HeaderFeed>
-            <CardContent>
-              <TitlePost>{props.title}</TitlePost>
-              <TextPost>{props.text}</TextPost>
-              </CardContent>
-              <FooterFeed>
-                <NumberVotes>{props.votesCount}</NumberVotes>
-                <IconVotesPost src={IconVotes} alt={IconVotes}/>
-                <NumberComments>
-                    {props.commentsCount}
-                  </NumberComments>
-                  <IconComents 
-                    // onClick={onClickComment}
-                    src={ComentIcon} 
-                    alt={ComentIcon}
-                  />
-            </FooterFeed>
-        </FeedCardContainer>
-      </CardContainer>
-      <CreateComment id={props.id}/>
-    </>
-  );
+    <S.Wrapper>
+      <S.CardContainer >
+        <S.FeedCardContainer onClick={() => goToDetailsPost(history, props.id)}>
+          <S.HeaderFeed>
+            <S.Image src={ImageLogo} alt={ImageLogo} />
+            <S.NameUserPost>{props.username}</S.NameUserPost>
+          </S.HeaderFeed>
+          <S.CardContent>
+            <S.TitlePost>{props.title}</S.TitlePost>
+            <S.TextPost>{props.text}</S.TextPost>
+          </S.CardContent>
+          <S.FooterFeed>
+            <S.NumberVotes>{props.votesCount}</S.NumberVotes>
+            <S.IconVotesPost src={IconVotes} alt={IconVotes} />
+            <S.NumberComments>
+              {props.commentsCount}
+            </S.NumberComments>
+            <S.IconComents
+              src={ComentIcon}
+              alt={ComentIcon}
+            />
+          </S.FooterFeed>
+        </S.FeedCardContainer>
+        <CreateComment id={props.id} />
+      </S.CardContainer>
+      
+    </S.Wrapper>
+  )
 }
 
 export default CardFeed

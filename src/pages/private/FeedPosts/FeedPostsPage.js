@@ -8,7 +8,7 @@ import { BASE_URL } from '../../../constants/RequestConfig'
 import CardFeed from '../../../components/CardFeed/CardFeed'
 import LoadingInfo from '../../../components/Loading/LoadingInfo'
 import CreatePost from '../../../components/CreatePost/CreatePost'
-import { goToCreatePost } from '../../../routes/coordinator'
+
 
 
 
