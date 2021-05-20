@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 import { FeedContainer, FabStyled } from './styled'
 import { useProtectPage } from '../../../hooks/useProtectPage'
 import { useUnProtectedPage } from '../../../hooks/useUnProtectedPage'
@@ -18,7 +18,7 @@ function FeedPostsPage() {
     useProtectPage()
     useUnProtectedPage()
 
-    const history = useHistory()
+    // const history = useHistory()
 
     const handleOpen = () => {
         setOpen(!open)

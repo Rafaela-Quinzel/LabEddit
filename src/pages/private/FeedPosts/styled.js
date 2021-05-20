@@ -5,10 +5,9 @@ import Fab from '@material-ui/core/Fab'
 
 
 export const FeedContainer = styled.div`
-   text-align: center;
-   display: grid;
-   justify-items: center;
-   margin: 10% auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 `
 
 export const TitlePage = styled.h1`

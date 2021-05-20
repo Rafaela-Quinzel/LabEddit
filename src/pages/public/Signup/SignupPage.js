@@ -14,14 +14,13 @@ import {
     OutlinedInput,
     FormControl,
     TextField,
-    Button
 } from '@material-ui/core'
 
 
 function SignUpPage() {
     const [showPassword, setShowPassword] = React.useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = React.useState(false)
-    
+
     const { form, onChange } = useForm({
         email: "",
         password: "",
@@ -72,7 +71,6 @@ function SignUpPage() {
                     name='username'
                     required
                 />
-                <br />
                 <TextField
                     value={form.email}
                     onChange={handleInputChange}
@@ -84,7 +82,6 @@ function SignUpPage() {
                     pattern={'[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}'}
                     required
                 />
-                <br />
                 <FormControl variant="outlined" required="true">
                     <InputLabel
                         htmlFor="outlined-adornment-password"
@@ -119,7 +116,6 @@ function SignUpPage() {
                         }
                     />
                 </FormControl>
-                <br />
                 <FormControl variant="outlined" required="true" style={{ margin: '2px 0' }}>
                     <InputLabel
                         htmlFor="outlined-adornment-password"
@@ -154,22 +150,22 @@ function SignUpPage() {
                         }
                     />
                 </FormControl>
-                <br />
-                <Button
-                    variant='contained'
-                    color="secondary"
-                    type="submit"
-                >
-                    SALVAR
-                </Button>
                 <S.AreaButton>
-                    <Button
+                    <S.ButtonStyled
+                        variant='contained'
+                        color="secondary"
+                        type="submit"
+                    >
+                        SALVAR
+                </S.ButtonStyled>
+
+                    <S.ButtonStyled
                         variant="outlined"
                         color="secondary"
                         onClick={() => goBack(history)}
                     >
                         VOLTAR
-                    </Button>
+                    </S.ButtonStyled>
                 </S.AreaButton>
             </S.FormContainer>
         </S.SignupPageContainer>
