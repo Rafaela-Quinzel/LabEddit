@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { useForm } from '../../../hooks/useForm'
 import { login } from '../../../services/User'
 import { useProtectPage } from '../../../hooks/useProtectPage'
-import { TextField, Button } from '@material-ui/core'
+import { TextField } from '@material-ui/core'
 import LogoPage from '../../../assets/astronauta.svg'
 import { goToSignup } from '../../../routes/coordinator'
 import { Visibility, VisibilityOff } from "@material-ui/icons"
@@ -67,7 +67,6 @@ function LoginPage() {
                     pattern='[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}'
                     required
                 />
-                <br />
                 <FormControl variant="outlined" required="true">
                     <InputLabel
                         htmlFor="outlined-adornment-password"
@@ -101,19 +100,24 @@ function LoginPage() {
                     />
                 </FormControl>
                 <S.AreaButton>
-                    <Button
+                    <S.ButtonStyled
                         variant='contained'
                         color="secondary"
                         type="submit"
                     >
                         LOGIN
-                    </Button>
-                    <Button
+                    </S.ButtonStyled>
+                    <S.ButtonStyled
                         color="secondary"
                         onClick={() => goToSignup(history)}
+                        style={{
+                            wordWrap: 'break-word',
+                            width: '85%',
+                            margin: '0 auto'
+                        }}
                     >
-                        Não tem Login? Clique aqui
-                    </Button>
+                        Não tem Login?  Clique aqui
+                    </S.ButtonStyled>
                 </S.AreaButton>
             </S.FormContainer>
         </S.LoginPageContainer>
