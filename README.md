@@ -61,32 +61,32 @@ Este projeto foi desenvolvido no curso da `Labenu` é um projeto desenvolvido em
 ### Imagens do projeto:
 
 <div>
-   *Página de Login
+   - Página de Login
  
-   <img src="./public/images/login.png" alt="login" width="300" height="300" />
+   <img src="./public/images/login.png" alt="login" width="300" height="300" style="margin: 5px 5px 0 10px"/>
 <br/>
  
-   *Página de Cadastro
+   - Página de Cadastro
  
    <img src="./public/images/cadastro.png" alt="cadastro" width="300" height="300" style="margin: 5px 5px 0 10px"/>
 <br/>
  
-   *Página de Criar Posts
+   - Página de Criar Posts
  
    <img src="./public/images/criar_post.png" alt="criar post" width="800" height="400" style="margin: 5px 5px 0 10px"/>
 <br/>
  
-   *Página de Posts
+   - Página de Posts
  
    <img src="./public/images/posts.png" alt="posts" width="800" height="400" style="margin: 5px 0 0 10px"/>
 <br/>
  
-   *Página de Comentários
+   - Página de Comentários
  
    <img src="./public/images/comentarios_post.png" alt="comentarios" width="800" height="400" style="margin: 5px 0 0 10px"/>
 <br/>
  
-   *Página de Erro
+   - Página de Erro
  
    <img src="./public/images/pagina_nao_encontrada.png" alt="pagina nao encontrada" width="600" height="400" style="margin: 5px 0 0 10px"/>
 <div>
