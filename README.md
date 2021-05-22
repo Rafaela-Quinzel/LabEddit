@@ -63,13 +63,13 @@ Este projeto foi desenvolvido no curso da `Labenu` é um projeto desenvolvido em
 <div>
    <p>Página de Login</p>
  <br/>
-   <img src="./public/images/login.png" alt="login" width="500" height="300" />
+   <img src="./public/images/login.png" alt="login" width="300" height="300" />
 <br/>
    <p>Página de Cadastro</p>
-   <img src="./public/images/cadastro.png" alt="cadastro" width="500" height="300" style="margin: 5px 30px 0 10px"/>
+   <img src="./public/images/cadastro.png" alt="cadastro" width="300" height="300" style="margin: 5px 5px 0 10px"/>
 <br/>
    <p>Página de Criar Posts</p>
-   <img src="./public/images/criar_post.png" alt="criar post" width="800" height="400" style="margin: 5px 0 0 10px"/>
+   <img src="./public/images/criar_post.png" alt="criar post" width="800" height="400" style="margin: 5px 5px 0 10px"/>
 <br/>
    <p>Página de Posts</p>
    <img src="./public/images/posts.png" alt="posts" width="800" height="400" style="margin: 5px 0 0 10px"/>
