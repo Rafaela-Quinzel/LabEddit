@@ -2,7 +2,7 @@
 
 Este projeto foi desenvolvido no curso da `Labenu` é um projeto desenvolvido em React e tem as funcionalidades básicas baseado no social bookmarks Reddit.
 
-`Link do surge:`
+`Link do surge:` labeddit_page.surge.sh
 
 ***
 <br/>
@@ -61,28 +61,33 @@ Este projeto foi desenvolvido no curso da `Labenu` é um projeto desenvolvido em
 ### Imagens do projeto:
 
 <div>
-   <p>Página de Login</p>
- <br/>
+   *Página de Login
+ 
    <img src="./public/images/login.png" alt="login" width="300" height="300" />
 <br/>
  
-   <p>Página de Cadastro</p>
+   *Página de Cadastro
+ 
    <img src="./public/images/cadastro.png" alt="cadastro" width="300" height="300" style="margin: 5px 5px 0 10px"/>
 <br/>
  
-   <p>Página de Criar Posts</p>
+   *Página de Criar Posts
+ 
    <img src="./public/images/criar_post.png" alt="criar post" width="800" height="400" style="margin: 5px 5px 0 10px"/>
 <br/>
  
-   <p>Página de Posts</p>
+   *Página de Posts
+ 
    <img src="./public/images/posts.png" alt="posts" width="800" height="400" style="margin: 5px 0 0 10px"/>
 <br/>
  
-   <p>Página de Comentários</p>
+   *Página de Comentários
+ 
    <img src="./public/images/comentarios_post.png" alt="comentarios" width="800" height="400" style="margin: 5px 0 0 10px"/>
 <br/>
  
-   <p>Página de Erro</p>
+   *Página de Erro
+ 
    <img src="./public/images/pagina_nao_encontrada.png" alt="pagina nao encontrada" width="600" height="400" style="margin: 5px 0 0 10px"/>
 <div>
 
