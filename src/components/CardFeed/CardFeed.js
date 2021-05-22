@@ -39,7 +39,6 @@ function CardFeed(props) {
         </S.FeedCardContainer>
         <CreateComment id={props.id} />
       </S.CardContainer>
-      
     </S.Wrapper>
   )
 }

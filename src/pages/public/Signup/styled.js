@@ -17,6 +17,14 @@ export const FormContainer = styled.form`
   row-gap: 1.4em;
   margin: 5px auto 10px auto;
 
+  @media screen and (min-width: 600px) {
+    width: 75%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 50%;
+  }
+
   @media screen and (min-width:1080px) {
     width: 30%;
     height: 50%;
@@ -41,6 +49,14 @@ export const AreaButton = styled.div`
   width: 50vw;
   height: 20vh;
   margin: 10px auto;
+
+  @media screen and (min-width: 600px) {
+    width: 30vw;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 20vw;
+  }
 
   @media screen and (min-width: 1080px) {
     width: 15vw;

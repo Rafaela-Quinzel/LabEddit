@@ -5,6 +5,7 @@ import SignupPage from '../pages/public/Signup/SignupPage'
 import DetailsPostPage from '../pages/private/DetailsPost/DetailsPostPage'
 import FeedPostsPage from '../pages/private/FeedPosts/FeedPostsPage'
 import CreateComment from '../components/CreateComment/CreateComment'
+import NotFoundPage from '../pages/public/NotFound/NotFoundPage'
 
 
 
@@ -28,6 +29,9 @@ const Router = () => {
             </Route>
             <Route exact path='/criar_post'>
                 <CreateComment/>
+            </Route>
+            <Route>
+                <NotFoundPage />
             </Route>
         </Switch>
     )

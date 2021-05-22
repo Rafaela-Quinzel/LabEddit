@@ -23,6 +23,9 @@ export const Logo = styled.img`
 export const Title = styled.h1`
   color: ${primaryColor};
   margin: 0 auto 6% auto;
+  font-style: oblique;
+  font-size: 4rem;
+  text-shadow: 1px 5px 7px black;
 
   @media screen and (min-width: 1080px) {
     margin: 0 auto 15px auto;
@@ -36,6 +39,14 @@ export const FormContainer = styled.form`
   height: 40%;
   justify-content: space-around;
   margin: 15px auto 10px auto;
+
+  @media screen and (min-width: 600px) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 60%;
+  }
 
   @media screen and (min-width:1080px) {
     margin: 0 auto 10px auto;
@@ -51,6 +62,14 @@ export const AreaButton = styled.div`
   row-gap: 2em;
   width: 50vw;
   margin: 15px auto;
+
+  @media screen and (min-width: 600px) {
+    width: 35vw;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 20vw;
+  }
 
   @media screen and (min-width: 1080px) {
     width: 15vw;

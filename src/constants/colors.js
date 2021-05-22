@@ -1,5 +1,5 @@
 // cores do Material-ui
-export const primaryColor = '#EE6145'
+export const primaryColor = '#E6742E'
 
 export const secondaryColor = '#2E1770'
 
