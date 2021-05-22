@@ -4,9 +4,11 @@ import { useHistory } from 'react-router-dom'
 import { useForm } from '../../../hooks/useForm'
 import { login } from '../../../services/User'
 import { useProtectPage } from '../../../hooks/useProtectPage'
-import { TextField } from '@material-ui/core'
+import { useUnProtectedPage } from '../../../hooks/useUnProtectedPage'
 import LogoPage from '../../../assets/astronauta.svg'
 import { goToSignup } from '../../../routes/coordinator'
+
+import { TextField } from '@material-ui/core'
 import { Visibility, VisibilityOff } from "@material-ui/icons"
 import {
     InputLabel,
@@ -15,6 +17,7 @@ import {
     OutlinedInput,
     FormControl
 } from "@material-ui/core"
+
 
 
 
@@ -27,6 +30,8 @@ function LoginPage() {
     })
 
     useProtectPage()
+    useUnProtectedPage()
+    
     const history = useHistory()
 
 
@@ -55,6 +60,7 @@ function LoginPage() {
         <S.LoginPageContainer>
             <S.Logo src={LogoPage} />
             <S.Title>LabEddit</S.Title>
+            
             <S.FormContainer onSubmit={handleSubmit}>
                 <TextField
                     value={form.email}

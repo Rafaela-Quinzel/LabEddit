@@ -1,43 +1,64 @@
 import styled from 'styled-components'
-import { mainLightGray, mainDarkPurple, mainAntiquewhite, mainDarkGray } from '../../constants/colors'
+import {
+   mainLightGray,
+   mainDarkPurple,
+   mainAntiquewhite,
+   mainDarkGray
+} from '../../constants/colors'
 
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-self: center;
-
-   @media screen and (min-width: 1080px) {
-      max-width: 490px;
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      margin: 5% 0 2% 0;
-   }
+  margin-top: 100px;
 `
 
 export const CardContainer = styled.div`
    display: flex;
    flex-direction: column;
-   align-items: center;
-   width: 80vw;
-   height: 60vh;
-   margin: 120px auto 10px;
+   justify-content: center;
+   width: 85vw;
+   height: 50vh;
+   margin: 0 auto;
    box-shadow: 0px 0px 1em #666;
    -webkit-box-shadow: 5px 0px 1em #666;
    -moz-box-shadow: 0px 0px 1em #666;
+   
+   @media screen and (min-width: 1024px) {
+      height: 70vh;
+      width: 60vw;
+   }
 
-   @media screen and(min-width: 1080px) {
-      cursor: pointer;
-      display: grid;
-      align-items: center;
-      max-width: 490px;
-      box-shadow: 0px 0px 1em #666;
-      -webkit-box-shadow: 5px 0px 1em #666;
-      -moz-box-shadow: 0px 0px 1em #666;
-      /* &:hover{
-         transform: scale(1.1);
-      } */
+   @media screen and (min-width: 1080px) {
+      height: 60vh;
+      width: 45vw;
+   }
+
+`
+
+export const FeedCardContainer = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid ${mainLightGray};
+   background-color: ${mainAntiquewhite};
+   text-align: center;
+   border-radius: 12px;
+   width: 75vw;
+   height: 30vh;
+   margin: 22px auto 5px auto;
+
+   @media screen and (min-width: 1024px) {
+      height: 50vh;
+      width: 50vw;
+   }
+
+   @media screen and (min-width: 1080px) {
+      width: 40vw;
+      height: 35vh;
    }
 `
 
@@ -46,16 +67,12 @@ export const HeaderFeed = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
-   padding-bottom: 2%;
    width: 100%;
    height: 6vh;
-   /* border: 1px solid purple; */
+`
 
-   @media screen and (min-width: 1080px) {
-      padding-bottom: 2%;
-      max-width: 490px;
-      height: 6vh;
-   }
+export const Image = styled.img`
+  width: 25px;
 `
 
 export const NameUserPost = styled.h2`
@@ -64,79 +81,52 @@ export const NameUserPost = styled.h2`
    font-size: 1rem;
 `
 
-export const Image = styled.img`
-  width: 28px;
-`
-
-export const FeedCardContainer = styled.div`
-   border: 1px solid ${mainLightGray};
-   background-color: ${mainAntiquewhite};
-   text-align: center;
-   border-radius: 12px;
-   width: 70vw;
-   height: 100vh;
-   margin: 5%;
-
-
-   @media screen and (min-width: 1080px) {
-      border: 1px solid ${mainLightGray};
-      background-color: ${mainAntiquewhite};
-      text-align: center;
-      border-radius: 12px;
-      max-width: 440px;
-      height: 50vh;
-      margin: 5%;
-      &:hover{
-         background-color: rgb(247, 229, 210);
-      }
-   }
-`
-
 export const CardContent = styled.div`
-   width: 90%;
-   height: 65%;
-   margin: 5px auto 5px auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   width: 100%;
+   height: 75%;
+   padding: 35px 10px 20px 10px;
    word-wrap: break-word;
-   text-align: center;
    overflow: auto;
-   border: 1px solid green;
-
-   @media screen and (min-width: 1080px) {
-      max-width: 400px;
-      min-width: 400px;
-      height: 32vh;
-      margin: 2% 5%;
-      word-wrap: break-word;
-      text-align: center;
-      overflow: auto;
-   }
 `
 
 export const TitlePost = styled.h3`
    color: ${mainDarkGray};
-   margin: 4% 5% 5% 1%;
+   margin: 5px auto 8px auto;
+   font-size: 1rem;
+`
+
+export const TextPost = styled.p`
+   color: ${mainDarkGray};
+   font-size: 0.85rem;
+   width: 95%;
+   height: 100%;
 `
 
 export const FooterFeed = styled.div`
    border-top: 1px solid ${mainLightGray};
    width: 100%;
+   height: 45px;
    position: relative;
-   /* border: 1px solid blue; */
-`
-
-export const IconVotesPost = styled.img`
-   width: 28px;
-`
-
-export const TextPost = styled.p`
-   color: ${mainDarkGray};
-   margin: 5% 4% 5% 1%;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
 `
 
 export const NumberVotes = styled.span`
   color: ${mainDarkPurple};
   font-weight: bolder;
   margin-right: 1%;
+`
+
+export const IconVotesPost = styled.img`
+   width: 20px;
 `
 
 export const NumberComments = styled.span`
@@ -146,7 +136,6 @@ export const NumberComments = styled.span`
 `
 
 export const IconComents = styled.img`
-   width: 28px;
+   width: 20px;
    margin-left: 2%;
-   margin-top: 4%;
 `

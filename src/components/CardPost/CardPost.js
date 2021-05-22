@@ -2,6 +2,7 @@ import React from 'react'
 import * as S from './styled'
 import ButtonVoteUp from '../../assets/voteup.svg'
 import ButtonVoteDown from '../../assets/votedown.svg'
+import ImageLogo from '../../assets/astronauta.svg'
 
 
 function CardPost(props) {
@@ -27,6 +28,7 @@ function CardPost(props) {
       <S.CardContainer>
         <S.PostCardContainer>
           <S.HeaderPost>
+          <S.Image src={ImageLogo} alt={ImageLogo} />
             <S.NameUserPost>
               {props.username}
             </S.NameUserPost>
@@ -43,17 +45,13 @@ function CardPost(props) {
                 src={ButtonVoteUp}
                 alt={ButtonVoteUp}
               />
-            </S.ButtonVote>
             <S.NumberVotes>{props.votesCount}</S.NumberVotes>
-            <S.ButtonVote>
               <S.IconButtonVote
                 onClick={handleDownVote}
                 src={ButtonVoteDown}
                 alt={ButtonVoteDown}
               />
             </S.ButtonVote>
-            <S.CommentsConteiner>
-            </S.CommentsConteiner>
           </S.FooterPost>
         </S.PostCardContainer>
       </S.CardContainer>

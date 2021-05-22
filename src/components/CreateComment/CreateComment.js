@@ -7,13 +7,13 @@ import { TextField, Button } from '@material-ui/core'
 
 function CreateComment(props) {
 
-    const { form, onChange } = useForm({text: ""})
+    const { form, onChange, restState } = useForm({text: ""})
 
 
     const handleSubmit = (event) => {
         event.preventDefault()
         AddComment(form, props.id)
-        // reset()
+        restState()
     }
 
     const handleInputChange = (event) => {
@@ -24,7 +24,6 @@ function CreateComment(props) {
     }
 
    
-
     return (
         <S.CreateContainer>
             <S.FormContainer onSubmit={handleSubmit}>
@@ -35,6 +34,7 @@ function CreateComment(props) {
                         label='comentar post'
                         name='text'
                         type='text'
+                        size='small'
                         required
                     />
                     <S.AreaButton>

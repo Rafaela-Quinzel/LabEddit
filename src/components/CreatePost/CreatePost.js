@@ -40,9 +40,9 @@ function CreatePost(props) {
                         placeholder='Título do seu post'
                         name='title'
                         type='title'
+                        size='small'
                         required
                     />
-                    <br />
                     <TextField
                         value={form.text}
                         onChange={handleInputChange}
@@ -53,15 +53,14 @@ function CreatePost(props) {
                         type='text'
                         required
                     />
-                    <br />
-                    <Button
-                        variant='contained'
-                        color="secondary"
-                        type="submit"
-                    >
-                        SALVAR
-                    </Button>
                     <S.AreaButton>
+                        <Button
+                            variant='contained'
+                            color="secondary"
+                            type="submit"
+                        >
+                            SALVAR
+                        </Button>
                         <Button
                             variant="outlined"
                             color="secondary"

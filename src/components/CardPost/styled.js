@@ -1,100 +1,114 @@
 import styled from 'styled-components'
-import { mainLightGray, mainDarkPurple, mainAntiquewhite, mainDarkGray, mainGray } from '../../constants/colors'
+import {
+   mainLightGray,
+   mainDarkPurple,
+   mainAntiquewhite,
+   mainDarkGray
+} from '../../constants/colors'
 
 
 export const CardContainer = styled.div`
-   display: grid;
-   justify-content: center;
-   margin-top: 4%;
+   display: flex;
+   flex-direction: column;
+`
+
+export const PostCardContainer = styled.div`
+   border: 1px solid ${mainLightGray};
+   border-radius: 12px;
+   width: 80vw;
+   height: 20vh;
+   margin: 15px auto;
+
+   @media screen and (min-width: 1024px) {
+      height: 30vh;
+      width: 50vw;
+   }
 `
 
 export const HeaderPost = styled.div`
-   text-align:  center;
    border-bottom: 1px solid ${mainLightGray};
-   width: 40vw;
+   width: 100%;
    height: 4vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   @media screen and (min-width: 1024px) {
+      height: 6vh;
+   }
 `
 
-export const PostCardContainer  = styled.div`
-   border: 1px solid ${mainLightGray};
-   border-radius: 12px;
-   width: 40vw;
-   height: 52vh;
-   margin: 4%;
+export const Image = styled.img`
+  width: 15px;
+  margin-right: 5px;
+
+   @media screen and (min-width: 1024px) {
+      width: 22px;
+   }
+`
+
+export const NameUserPost = styled.h3`
+   color: ${mainDarkPurple};
+   font-size: 1rem;
 `
 
 export const CardContent = styled.div`
    background-color: ${mainAntiquewhite};
-   width: 38vw;
-   height: 34vh;
-   margin: 2% 2%;
+   width: 100%;
+   height: 58%;
    word-wrap: break-word;
+   overflow: auto;
+
+   display: flex;
+   justify-content: center;
+
+   @media screen and (min-width: 1080px) {
+      height: 60%;
+   }
+`
+
+export const TextPost = styled.p`
+   color: ${mainDarkGray};
+   margin: 4% 4%;
+   font-size: 0.9rem;
 `
 
 export const FooterPost = styled.div`
    border-top: 1px solid ${mainLightGray};
+   box-sizing: border-box;
    display: flex;
+   align-items: center;
+   justify-content: start;
+   width: 100%;
+   height: 20%;
+   position: relative;
 `
 
 export const ButtonVote = styled.span`
    color: ${mainDarkPurple};
-   font-size: 30px;
-   margin: 1% 4% 0% 4%;
-   &:hover{
-      transform: scale(1.2);
-   }
+   display: flex;
+   justify-content: space-around;
+   width: 90px;
+   margin-left: 15px;
+`
+
+export const IconButtonVote = styled.img`
+   width: 20px;
+
+   @media screen and (min-width: 1080px) {
+      cursor: pointer;
+
+      &:hover{
+        transform: scale(1.2);
+      }
+   }  
 `
 
 export const NumberVotes = styled.span`
   color: ${mainDarkPurple};
   font-weight: bolder;
-  margin-top: 2%;
 `
 
-export const IconButtonVote =  styled.img`
-   width: 25px;
-`
 
-export const AddComment = styled.p`
-   border-top: 1px solid black;
-`
 
-export const CommentsConteiner = styled.span`
-   display: flex;
-   margin-left: 55%;
-`
-
-export const NumberComments = styled.span`
-  color: ${mainDarkPurple};
-  font-weight: bolder;
-  margin-right: 15%;
-  margin-top: 30%;
-`
-
-export const IconComents = styled.img`
-   width: 25px;
-   margin-left: 10%;
-   &:hover{
-      transform: scale(1.2);
-   }
-`
-
-export const AddPost = styled.p`
-   border-top: 1px solid black;
-`
-
-export const CreatePost = styled.div`
-   border: 1px solid black;
-   width: 30vw;
-   height: 32vh;
-   margin: 2%;
-`
-
-export const NameUserPost = styled.h3`
-   color: ${mainDarkPurple};
-`
-
-export const TextPost = styled.p`
-   color: ${mainDarkGray};
-   margin: 5% 2%;
-`

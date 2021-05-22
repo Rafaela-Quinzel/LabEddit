@@ -1,9 +1,20 @@
 import styled from 'styled-components'
+import { primaryColor } from '../../constants/colors'
 
-// Styled Loading
+
 export const LoadingContainer = styled.div`
+  height: 50vh;
+  width: 100vw;
+  margin: 90px auto;
+  word-wrap: break-word;
+
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 250px;
+  align-items: center;
+`
+
+export const TextContainer = styled.h2`
+  color: ${primaryColor};
+  margin-bottom: 50px;
 `
