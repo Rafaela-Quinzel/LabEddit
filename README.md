@@ -1,6 +1,6 @@
 #  _Projeto LabEddit_  
 
-Este projeto foi desenvolvido no curso da `Labenu` é um projeto desenvolvido em React e tem as funcionalidades básicas baseado no social bookmarks Reddit.
+Este projeto foi desenvolvido em React no curso da `Labenu` é um projeto com funcionalidades básicas baseado no social bookmarks Reddit.
 
 `Link do surge:` labeddit_page.surge.sh
 
